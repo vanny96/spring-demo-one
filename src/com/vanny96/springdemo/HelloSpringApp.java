@@ -12,6 +12,7 @@ public class HelloSpringApp {
 		
 		System.out.println(coach.getDailyWorkout());
 		System.out.println(coach.getYourLuck());
+		System.out.println(coach.getYourDiet());
 		
 		context.close();
 	}

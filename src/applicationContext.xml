@@ -8,12 +8,18 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<bean id="FortuneTeller"
-		class="com.vanny96.springdemo.BadLuckTeller"
+		class="com.vanny96.springdemo.fortune.BadLuckTeller"
 	></bean>
 	
+	<bean id="DietTeller"
+		class="com.vanny96.springdemo.diet.BadFitnessManager">
+	</bean>
+	
 	<bean id="Coach"
-		class="com.vanny96.springdemo.VolleyBallCoach">
+		class="com.vanny96.springdemo.coach.VolleyBallCoach">
+		
 		<constructor-arg ref="FortuneTeller"></constructor-arg>
+		<property name="dietTeller" ref="DietTeller"></property>
 	</bean>
 	
 </beans>
