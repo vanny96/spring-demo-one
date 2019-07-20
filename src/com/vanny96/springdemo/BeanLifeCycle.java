@@ -1,0 +1,24 @@
+package com.vanny96.springdemo;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.vanny96.springdemo.coach.Coach;
+
+public class BeanLifeCycle {
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("BeanLifeCycleAppConfiguration.xml");
+		
+		Coach coach = context.getBean("Coach", Coach.class);
+		
+		System.out.println(coach.getDailyWorkout());
+		System.out.println(coach.getYourLuck());
+		System.out.println(coach.getYourDiet());
+		
+		System.out.println(coach.getEmailAddress());
+		System.out.println(coach.getTeam());
+		
+		context.close();
+	}
+
+}

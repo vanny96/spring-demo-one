@@ -49,5 +49,13 @@ public class TrackCoach implements Coach {
 	public String getYourDiet() {
 		return dietTeller.tellDiet();
 	}
+	
+	public void beanInit() {
+		System.out.println("Starting track coach:\n");
+	}
+	
+	public void beanDestroy() {
+		System.out.println("\nClosing track coach");
+	}
 
 }
