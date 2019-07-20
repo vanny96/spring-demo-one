@@ -6,9 +6,10 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:property-placeholder location="classpath:sport.properties"/>
 	
 	<bean id="FortuneTeller"
-		class="com.vanny96.springdemo.fortune.BadLuckTeller"
+		class="com.vanny96.springdemo.fortune.RandomFortuneTeller"
 	></bean>
 	
 	<bean id="DietTeller"
@@ -21,7 +22,7 @@
 		<constructor-arg ref="FortuneTeller"></constructor-arg>
 		<property name="dietTeller" ref="DietTeller"></property>
 		<property name="emailAddress" value="coach1@mail.it"></property>
-		<property name="team" value="Napoli"></property>
+		<property name="team" value="${coach.team}"></property>
 	</bean>
 	
 </beans>
