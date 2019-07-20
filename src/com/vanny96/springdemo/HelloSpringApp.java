@@ -14,6 +14,9 @@ public class HelloSpringApp {
 		System.out.println(coach.getYourLuck());
 		System.out.println(coach.getYourDiet());
 		
+		System.out.println(coach.getEmailAddress());
+		System.out.println(coach.getTeam());
+		
 		context.close();
 	}
 }

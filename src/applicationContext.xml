@@ -20,6 +20,8 @@
 		
 		<constructor-arg ref="FortuneTeller"></constructor-arg>
 		<property name="dietTeller" ref="DietTeller"></property>
+		<property name="emailAddress" value="coach1@mail.it"></property>
+		<property name="team" value="Napoli"></property>
 	</bean>
 	
 </beans>

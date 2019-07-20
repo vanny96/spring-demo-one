@@ -6,6 +6,8 @@ import com.vanny96.springdemo.fortune.FortuneTeller;
 public class BaseballCoach implements Coach{
 	private FortuneTeller fortuneTeller;
 	private DietTeller dietTeller;
+	private String emailAddress;
+	private String team;
 
 	public BaseballCoach() {
 		super();
@@ -19,6 +21,24 @@ public class BaseballCoach implements Coach{
 	
 	public void setDietTeller(DietTeller dietTeller) {
 		this.dietTeller = dietTeller;
+	}
+	
+	
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
 	}
 
 	public String getDailyWorkout(){
